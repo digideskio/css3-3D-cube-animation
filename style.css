@@ -1,0 +1,135 @@
+/* CSS3 3D cube animation */
+
+/* GENERAL */
+.cubo,.cubo .cara {
+  width: 200px;
+	height: 200px;
+}
+.cubo .cara {
+	position: absolute;
+}
+.cubo {
+	margin: 100px auto;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: perspective(700px) rotateX(-30deg) rotateY(-30deg);
+	-moz-transform: perspective(700px) rotateX(-30deg) rotateY(-30deg);
+	-o-transform: perspective(700px) rotateX(-30deg) rotateY(-30deg);
+	-ms-transform: perspective(700px) rotateX(-30deg) rotateY(-30deg);
+	transform: perspective(700px) rotateX(-30deg) rotateY(-30deg);
+}
+/* FACES */
+.cubo .cara#superior {
+	background-color: #70c7ab;
+	-webkit-transform: rotateX(90deg) translateZ(100px);
+	-moz-transform: rotateX(90deg) translateZ(100px);
+	-o-transform: rotateX(90deg) translateZ(100px);
+	-ms-transform: rotateX(90deg) translateZ(100px);
+	transform: rotateX(90deg) translateZ(100px);
+}
+.cubo .cara#frente {
+	background-color: #3c6e59;
+	-webkit-transform: translateZ(100px);
+	-moz-transform: translateZ(100px);
+	-o-transform: translateZ(100px);
+	-ms-transform: translateZ(100px);
+	transform: translateZ(100px);
+}
+.cubo .cara#atras {
+	background-color: #92edca;
+	-webkit-transform: translateZ(-100px);
+	-moz-transform: translateZ(-100px);
+	-o-transform: translateZ(-100px);
+	-ms-transform: translateZ(-100px);
+	transform: translateZ(-100px);
+}
+.cubo .cara#derecha {
+	background-color: #70bea0;
+	-webkit-transform: rotateY(90deg) translateZ(100px);
+	-moz-transform: rotateY(90deg) translateZ(100px);
+	-o-transform: rotateY(90deg) translateZ(100px);
+	-ms-transform: rotateY(90deg) translateZ(100px);
+	transform: rotateY(90deg) translateZ(100px);
+}
+.cubo .cara#izquierda {
+	background-color: #9ad9c1;
+	-webkit-transform: rotateY(-90deg) translateZ(100px);
+	-moz-transform: rotateY(-90deg) translateZ(100px);
+	-o-transform: rotateY(-90deg) translateZ(100px);
+	-ms-transform: rotateY(-90deg) translateZ(100px);
+	transform: rotateY(-90deg) translateZ(100px);
+}
+.cubo .cara#inferior {
+	background-color: #60937f;
+	-webkit-transform: rotateX(-90deg) translateZ(100px);
+	-moz-transform: rotateX(-90deg) translateZ(100px);
+	-o-transform: rotateX(-90deg) translateZ(100px);
+	-ms-transform: rotateX(-90deg) translateZ(100px);
+	transform: rotateX(-90deg) translateZ(100px);
+}
+.cubo {
+	-webkit-animation: rotate 2s infinite linear;
+	-moz-animation: rotate 2s infinite linear;
+	-ms-animation: rotate 2s infinite linear;
+	-o-animation: rotate 2s infinite linear;
+	animation: rotate 2s infinite linear;
+}
+/* ANIMATION */
+@keyframes "rotate" {
+ 0% {
+    -webkit-transform: rotateX( 0deg ) rotateY( 0deg );
+   	-moz-transform: rotateX( 0deg ) rotateY( 0deg );
+   	-o-transform: rotateX( 0deg ) rotateY( 0deg );
+   	-ms-transform: rotateX( 0deg ) rotateY( 0deg );
+   	transform: rotateX( 0deg ) rotateY( 0deg );
+ }
+ 100% {
+    -webkit-transform: rotateX( 360deg ) rotateY( 360deg );
+   	-moz-transform: rotateX( 360deg ) rotateY( 360deg );
+   	-o-transform: rotateX( 360deg ) rotateY( 360deg );
+   	-ms-transform: rotateX( 360deg ) rotateY( 360deg );
+   	transform: rotateX( 360deg ) rotateY( 360deg );
+ }
+}
+@-moz-keyframes rotate {
+ 0% {
+   -moz-transform: rotateX( 0deg ) rotateY( 0deg );
+   transform: rotateX( 0deg ) rotateY( 0deg );
+ }
+ 100% {
+   -moz-transform: rotateX( 360deg ) rotateY( 360deg );
+   transform: rotateX( 360deg ) rotateY( 360deg );
+ }
+}
+@-webkit-keyframes "rotate" {
+ 0% {
+   -webkit-transform: rotateX( 0deg ) rotateY( 0deg );
+   transform: rotateX( 0deg ) rotateY( 0deg );
+ }
+ 100% {
+   -webkit-transform: rotateX( 360deg ) rotateY( 360deg );
+   transform: rotateX( 360deg ) rotateY( 360deg );
+ }
+}
+@-ms-keyframes "rotate" {
+ 0% {
+   -ms-transform: rotateX( 0deg ) rotateY( 0deg );
+   transform: rotateX( 0deg ) rotateY( 0deg );
+ }
+ 100% {
+   -ms-transform: rotateX( 360deg ) rotateY( 360deg );
+   transform: rotateX( 360deg ) rotateY( 360deg );
+ }
+}
+@-o-keyframes "rotate" {
+ 0% {
+   -o-transform: rotateX( 0deg ) rotateY( 0deg );
+   transform: rotateX( 0deg ) rotateY( 0deg );
+ }
+ 100% {
+   -o-transform: rotateX( 360deg ) rotateY( 360deg );
+   transform: rotateX( 360deg ) rotateY( 360deg );
+ }
+}
